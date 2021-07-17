@@ -66,6 +66,17 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="notification-list mx-h-350 customscroll">
                                 <ul class="message-system">
+                                    @if (Auth::check())
+                                        @foreach (Auth::user()->notifications as $notification)
+                                            <li>
+                                                <a href="#">
+                                                    <img src="{{ asset('admin-page/vendors/images/img.jpg') }}" alt="">
+                                                    <h3>{{ "System BOT" }}</h3>
+                                                    <p>{{ $notification->data }}</p>
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    @endif
                                 </ul>
                             </div>
                         </div>
@@ -272,5 +283,6 @@
         @yield('script')
         <script src="{{ asset('bower_components/pusher-js/dist/web/pusher.min.js') }}"></script>
         <script src="{{ asset('admin-page/src/scripts/pusher-admin.js') }}"></script>
+        <script src="{{ asset('admin-page/src/script/pusher-notification.js') }}"></script>
     </body>
 </html>

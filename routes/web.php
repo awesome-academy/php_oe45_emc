@@ -13,6 +13,7 @@ use App\Http\Controllers\Client\CategoryController as ClientCategoryController;
 use App\Http\Controllers\Client\HomeController as ClientHomeController;
 use App\Http\Controllers\Client\ProductController as ClientProductController;
 use App\Http\Controllers\Client\CommentController as ClientCommentController;
+use App\Http\Controllers\Client\NotificationController;
 use App\Http\Controllers\Client\UserController as ClientUserController;
 use App\Http\Controllers\Client\OrderController as ClientOrderController;
 use App\Http\Controllers\Client\SuggestController as ClientSuggestController;
