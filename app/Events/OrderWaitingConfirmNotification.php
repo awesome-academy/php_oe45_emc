@@ -14,7 +14,7 @@ class OrderWaitingConfirmNotification implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $data;
+    protected $data;
     /**
      * Create a new event instance.
      *
