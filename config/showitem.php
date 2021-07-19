@@ -42,7 +42,7 @@ return [
         'customer' => 2,
     ],
     'status_order' => [
-        'pending' => 1,
+        'pending' => 0,
     ],
     'type_payment' => [
         'on_delivery' => 1,
@@ -55,4 +55,8 @@ return [
     ],
     'menu_item' => 7,
     'minute_delay_send_mail' => 2,
+    'role' => [
+        'admin' => 1,
+        'customer' => 2,
+    ],
 ];
