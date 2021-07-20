@@ -7,6 +7,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
+use ConsoleTVs\Charts\Registrar as Charts;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -53,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Charts $charts)
     {
         Blade::withoutDoubleEncoding();
         Paginator::useBootstrap();
@@ -64,5 +65,10 @@ class AppServiceProvider extends ServiceProvider
                 $view->with(['categoriesMenu' => $categoriesMenu]);
             }
         );
+        $charts->register([
+            \App\Charts\StatisticalOrderChart::class,
+            \App\Charts\StatisticalOrderAWeekChart::class,
+            \App\Charts\StatisticalOrderAYearChart::class
+        ]);
     }
 }

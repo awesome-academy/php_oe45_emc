@@ -283,6 +283,6 @@
         @yield('script')
         <script src="{{ asset('bower_components/pusher-js/dist/web/pusher.min.js') }}"></script>
         <script src="{{ asset('admin-page/src/scripts/pusher-admin.js') }}"></script>
-        <script src="{{ asset('admin-page/src/script/pusher-notification.js') }}"></script>
+        <script src="{{ asset('admin-page/src/scripts/pusher-notification.js') }}"></script>
     </body>
 </html>
